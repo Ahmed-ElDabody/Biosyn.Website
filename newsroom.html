@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pipeline | Biosyn Pharmaceuticals</title>
-  <meta name="description" content="Nine compounds in active development across pediatric and ENT care, built for safety, efficacy, and accessibility." />
+  <title>Newsroom | Biosyn Pharmaceuticals</title>
+  <meta name="description" content="The latest news, milestones, and updates from Biosyn Pharmaceuticals." />
   <meta name="theme-color" content="#0A2540" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pipeline | Biosyn Pharmaceuticals" />
-  <meta property="og:description" content="Nine compounds in active development across pediatric and ENT care, built for safety, efficacy, and accessibility." />
+  <meta property="og:title" content="Newsroom | Biosyn Pharmaceuticals" />
+  <meta property="og:description" content="The latest news, milestones, and updates from Biosyn Pharmaceuticals." />
   <meta property="og:image" content="assets/logo.png" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
   <link rel="apple-touch-icon" href="assets/logo.png" />
@@ -31,9 +31,9 @@
           <li><a class="nav-link" href="index.html">Home</a></li>
           <li><a class="nav-link" href="about.html">About</a></li>
           <li><a class="nav-link" href="products.html">Products</a></li>
-          <li><a class="nav-link active" href="pipeline.html">Pipeline</a></li>
+          <li><a class="nav-link" href="pipeline.html">Pipeline</a></li>
           <li><a class="nav-link" href="resources.html">Resources</a></li>
-          <li><a class="nav-link" href="newsroom.html">Newsroom</a></li>
+          <li><a class="nav-link active" href="newsroom.html">Newsroom</a></li>
           <li><a class="nav-link" href="careers.html">Careers</a></li>
           <li><a class="nav-link" href="partners.html">Partners</a></li>
           <li><a class="nav-link" href="contact.html">Contact</a></li>
@@ -52,9 +52,9 @@
     <a class="" href="index.html">Home</a>
     <a class="" href="about.html">About</a>
     <a class="" href="products.html">Products</a>
-    <a class="active" href="pipeline.html">Pipeline</a>
+    <a class="" href="pipeline.html">Pipeline</a>
     <a class="" href="resources.html">Resources</a>
-    <a class="" href="newsroom.html">Newsroom</a>
+    <a class="active" href="newsroom.html">Newsroom</a>
     <a class="" href="careers.html">Careers</a>
     <a class="" href="partners.html">Partners</a>
     <a class="" href="contact.html">Contact</a>
@@ -64,37 +64,45 @@
   </aside>
 
 
-
-
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="page-hero-deco"></div>
     <div class="container"><div class="page-hero-inner">
-      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Pipeline</span></div>
-      <h1>Nine compounds <span class="accent">in active development.</span></h1>
-      <p class="lead">Our pipeline reflects deliberate choices — formulations that close real gaps in pediatric and ENT care, built for safety, efficacy, and accessibility.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Newsroom</span></div>
+      <h1>News &amp; <span class="accent">updates.</span></h1>
+      <p class="lead">The latest from Biosyn Pharmaceuticals — company milestones, product news, and updates from our journey to make quality healthcare accessible.</p>
     </div></div>
   </section>
 
-  <!-- PIPELINE -->
+  <!-- NEWS GRID -->
   <section class="section">
     <div class="container">
-      <div class="pipeline-legend" data-animate>
-        <div class="leg-item"><span class="leg-dot leg-research"></span> Research</div>
-        <div class="leg-item"><span class="leg-dot leg-formulation"></span> Formulation</div>
-        <div class="leg-item"><span class="leg-dot leg-registration"></span> Registration</div>
-        <div class="leg-item"><span class="leg-dot leg-launch"></span> Launch-Ready</div>
+      <!-- ============================================
+           EDIT HERE: NEWS ARTICLES
+           To ADD news: copy one <article class="news-card">...</article> block and edit:
+             - news-pill text (Milestone / Product / Update / Press Release)
+             - the date, title, and summary
+             - the icon (data-lucide) and color class (news-m1 ... news-m6)
+           These are placeholder items — replace with your real news.
+           ============================================ -->
+      <div class="news-grid">
+        <article class="news-card" data-animate>
+          <div class="news-media news-m1"><span class="news-pill">Milestone</span><i data-lucide="flag"></i></div>
+          <div class="news-body"><div class="news-date">2024</div><h3>Biosyn launches its first nasal-care portfolio</h3><p>With Calmare, Calmare Plus, and Panmist Gel, Biosyn enters the ENT market with a complete nasal-care suite — covering daily hygiene, active relief, and sustained moisturization.</p><a href="contact.html" class="news-link">Read more <i data-lucide="arrow-right"></i></a></div>
+        </article>
+        <article class="news-card" data-animate>
+          <div class="news-media news-m2"><span class="news-pill">Pipeline</span><i data-lucide="flask-conical"></i></div>
+          <div class="news-body"><div class="news-date">2024</div><h3>Nine compounds advancing through development</h3><p>Our R&amp;D pipeline spans pediatric and ENT care, with several compounds approaching registration and launch readiness.</p><a href="pipeline.html" class="news-link">Read more <i data-lucide="arrow-right"></i></a></div>
+        </article>
+        <article class="news-card" data-animate>
+          <div class="news-media news-m3"><span class="news-pill">Quality</span><i data-lucide="shield-check"></i></div>
+          <div class="news-body"><div class="news-date">2024</div><h3>EDA notification achieved across launched products</h3><p>All marketed Biosyn products are now notified with the Egyptian Drug Authority, reinforcing our commitment to quality and compliance.</p><a href="about.html#quality" class="news-link">Read more <i data-lucide="arrow-right"></i></a></div>
+        </article>
       </div>
-      <div class="pipeline-grid">
-        <article class="pipe-card" data-animate><div class="pipe-header"><span class="pipe-stage stage-registration">Registration</span><span class="pipe-area">ENT</span></div><h3 class="pipe-name">Revozime</h3><p class="pipe-active">Alpha Amylase</p><div class="pipe-progress"><div class="pipe-bar" style="--w: 75%"></div></div></article>
-        <article class="pipe-card" data-animate><div class="pipe-header"><span class="pipe-stage stage-formulation">Formulation</span><span class="pipe-area">Pediatrics</span></div><h3 class="pipe-name">Easovent</h3><p class="pipe-active">Ivy · Zinc · Acetylcysteine</p><div class="pipe-progress"><div class="pipe-bar" style="--w: 55%"></div></div></article>
-        <article class="pipe-card" data-animate><div class="pipe-header"><span class="pipe-stage stage-research">Research</span><span class="pipe-area">Pediatrics</span></div><h3 class="pipe-name">Grip Flow</h3><p class="pipe-active">Dell Seed Oil</p><div class="pipe-progress"><div class="pipe-bar" style="--w: 30%"></div></div></article>
-        <article class="pipe-card" data-animate><div class="pipe-header"><span class="pipe-stage stage-registration">Registration</span><span class="pipe-area">Pediatrics</span></div><h3 class="pipe-name">Ibutemp</h3><p class="pipe-active">Ibuprofen 200 mg / 5 ml</p><div class="pipe-progress"><div class="pipe-bar" style="--w: 80%"></div></div></article>
-        <article class="pipe-card" data-animate><div class="pipe-header"><span class="pipe-stage stage-formulation">Formulation</span><span class="pipe-area">Pediatrics</span></div><h3 class="pipe-name">Histswift</h3><p class="pipe-active">Fexofenadine HCl 30 mg / 5 ml</p><div class="pipe-progress"><div class="pipe-bar" style="--w: 60%"></div></div></article>
-        <article class="pipe-card" data-animate><div class="pipe-header"><span class="pipe-stage stage-formulation">Formulation</span><span class="pipe-area">ENT</span></div><h3 class="pipe-name">Nasquel</h3><p class="pipe-active">Triamcinolone Acetonide 55 mcg/dose</p><div class="pipe-progress"><div class="pipe-bar" style="--w: 50%"></div></div></article>
-        <article class="pipe-card" data-animate><div class="pipe-header"><span class="pipe-stage stage-launch">Launch-Ready</span><span class="pipe-area">GI</span></div><h3 class="pipe-name">Mugard</h3><p class="pipe-active">Sodium Alginate · Bicarbonate · Calcium Carbonate</p><div class="pipe-progress"><div class="pipe-bar" style="--w: 92%"></div></div></article>
-        <article class="pipe-card" data-animate><div class="pipe-header"><span class="pipe-stage stage-research">Research</span><span class="pipe-area">Specialty</span></div><h3 class="pipe-name">Hemolieve</h3><p class="pipe-active">Pentosan Sodium Polysulphate</p><div class="pipe-progress"><div class="pipe-bar" style="--w: 25%"></div></div></article>
-        <article class="pipe-card" data-animate><div class="pipe-header"><span class="pipe-stage stage-registration">Registration</span><span class="pipe-area">Pediatrics</span></div><h3 class="pipe-name">Dorella</h3><p class="pipe-active">D3 · K2 · DHA</p><div class="pipe-progress"><div class="pipe-bar" style="--w: 78%"></div></div></article>
+
+      <!-- Optional: empty-state note. Delete when you have plenty of news. -->
+      <div style="text-align:center; margin-top:48px;" data-animate>
+        <p style="color:var(--muted); font-size:0.95rem;">More updates coming soon as Biosyn continues to grow.</p>
       </div>
     </div>
   </section>
@@ -102,12 +110,13 @@
   <!-- CTA -->
   <section class="section" style="background: var(--canvas-tint);">
     <div class="container"><div class="cta-band" data-animate>
-      <h2>Interested in partnership or licensing?</h2>
-      <p>We welcome conversations with partners who share our commitment to accessible, quality healthcare.</p>
-      <a href="contact.html" class="btn btn-light">Get in Touch
+      <h2>Press &amp; media inquiries</h2>
+      <p>For interviews, press materials, or media questions, our team is here to help.</p>
+      <a href="mailto:Info@biosyn-ph.com?subject=Press%20%26%20Media%20Inquiry" class="btn btn-light">Contact Media Team
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div></div>
   </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-top">

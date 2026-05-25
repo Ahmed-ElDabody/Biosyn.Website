@@ -188,12 +188,13 @@ h1, h2, h3, h4, h5, h6 {
 .nav-logo img { height: 46px; width: auto; }
 .nav-menu { display: flex; align-items: center; gap: 2px; }
 .nav-link {
-  padding: 10px 16px;
+  padding: 10px 13px;
   font-size: 14px;
   font-weight: 600;
   color: var(--ink-2);
   border-radius: 100px;
   transition: all var(--d-fast) var(--ease-out);
+  white-space: nowrap;
 }
 .nav-link:hover { color: var(--navy-900); background: var(--blue-50); }
 .nav-link.active { color: var(--blue-700); }
@@ -204,7 +205,8 @@ h1, h2, h3, h4, h5, h6 {
 .nav-toggle.active span:nth-child(2) { opacity: 0; }
 .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 1024px) {
+/* Hide desktop menu earlier since we now have 9 items */
+@media (max-width: 1180px) {
   .nav-menu, .nav-cta .btn { display: none; }
   .nav-toggle { display: flex; }
 }
