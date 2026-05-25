@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Biosyn Pharmaceuticals</title>
+  <meta name="description" content="Get in touch with Biosyn Pharmaceuticals. Partner with us, request product information, or reach our team directly." />
+  <meta name="theme-color" content="#0A2540" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact | Biosyn Pharmaceuticals" />
+  <meta property="og:description" content="Get in touch with Biosyn Pharmaceuticals. Partner with us, request product information, or reach our team directly." />
+  <meta property="og:image" content="assets/logo.png" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="page.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Biosyn Pharmaceuticals home">
+          <img src="assets/logo.png" alt="Biosyn Pharmaceuticals" />
+        </a>
+        <ul class="nav-menu">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="products.html">Products</a></li>
+          <li><a class="nav-link" href="pipeline.html">Pipeline</a></li>
+          <li><a class="nav-link" href="resources.html">Resources</a></li>
+          <li><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-primary">
+            Contact Us
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <aside class="nav-mobile" id="navMobile">
+    <a class="" href="index.html">Home</a>
+    <a class="" href="about.html">About</a>
+    <a class="" href="products.html">Products</a>
+    <a class="" href="pipeline.html">Pipeline</a>
+    <a class="" href="resources.html">Resources</a>
+    <a class="active" href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Get in Touch
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </aside>
+
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-deco"></div>
+    <div class="container"><div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Contact</span></div>
+      <h1>Let's <span class="accent">talk.</span></h1>
+      <p class="lead">Partner with us, request product information, or join the Biosyn journey. Our team responds within one business day.</p>
+    </div></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info" data-animate>
+          <h3 class="contact-info-title">Reach our team directly.</h3>
+          <a href="tel:01000492070" class="contact-row"><div class="contact-icon"><i data-lucide="phone"></i></div><div><div class="contact-label">Phone</div><div class="contact-value">+20 100 049 2070</div></div></a>
+          <a href="mailto:Info@biosyn-ph.com" class="contact-row"><div class="contact-icon"><i data-lucide="mail"></i></div><div><div class="contact-label">Email</div><div class="contact-value">Info@biosyn-ph.com</div></div></a>
+          <div class="contact-row static"><div class="contact-icon"><i data-lucide="map-pin"></i></div><div><div class="contact-label">Headquarters</div><div class="contact-value">Cairo, Egypt</div></div></div>
+          <div class="contact-divider"></div>
+          <div><div class="contact-label" style="margin-bottom:12px;">Follow us</div>
+            <div class="social-links">
+              <a href="https://www.facebook.com/share/1N5hrjsTDB/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+              <a href="https://www.linkedin.com/company/biosyn-pharmaceutical/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" data-animate>
+          <div class="form-grid">
+            <div class="form-group"><label for="cName">Full Name</label><input id="cName" name="name" type="text" required placeholder="Your full name"/></div>
+            <div class="form-group"><label for="cEmail">Email Address</label><input id="cEmail" name="email" type="email" required placeholder="you@example.com"/></div>
+            <div class="form-group"><label for="cPhone">Phone (optional)</label><input id="cPhone" name="phone" type="tel" placeholder="+20 xxx xxx xxxx"/></div>
+            <div class="form-group"><label for="cTopic">Topic</label><select id="cTopic" name="topic" required><option value="">Select a topic</option><option>Product Inquiry</option><option>Partnership Opportunity</option><option>Medical Information</option><option>Careers</option><option>Press / Media</option><option>Other</option></select></div>
+            <div class="form-group form-group-full"><label for="cMessage">Message</label><textarea id="cMessage" name="message" rows="5" required placeholder="How can we help?"></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+          <p class="form-note"><i data-lucide="lock"></i> Your information is treated with confidentiality and used only to respond to your inquiry.</p>
+        </form>
+      </div>
+      <div class="map-wrap" data-animate>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27640.66085!2d31.235712!3d30.044420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Egypt!5e0!3m2!1sen!2seg!4v1700000000000" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Biosyn Pharmaceuticals — Cairo, Egypt"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo-white.png" alt="Biosyn Pharmaceuticals" class="footer-logo" />
+          <p>A commitment towards better health. Premium pharmaceutical care, made accessible.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/share/1N5hrjsTDB/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="https://www.linkedin.com/company/biosyn-pharmaceutical/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="about.html">About Biosyn</a>
+          <a href="about.html#vision">Vision &amp; Mission</a>
+          <a href="about.html#values">Core Values</a>
+          <a href="about.html#quality">Quality</a>
+        </div>
+        <div class="footer-col">
+          <h5>Portfolio</h5>
+          <a href="products.html">Products</a>
+          <a href="pipeline.html">Pipeline</a>
+          <a href="products.html#therapeutic">Therapeutic Areas</a>
+          <a href="resources.html">Resources</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="tel:01000492070">+20 100 049 2070</a>
+          <a href="mailto:Info@biosyn-ph.com">Info@biosyn-ph.com</a>
+          <span class="footer-static">Cairo, Egypt</span>
+        </div>
+        <div class="footer-col footer-newsletter">
+          <h5>Stay Updated</h5>
+          <p>Get pipeline updates and company news.</p>
+          <form class="footer-form">
+            <input type="email" placeholder="your@email.com" required />
+            <button type="submit" aria-label="Subscribe"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">© <span id="year"></span> Biosyn Pharmaceuticals. All rights reserved.</div>
+        <div class="footer-bottom-right">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
