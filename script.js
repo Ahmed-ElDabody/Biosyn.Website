@@ -61,7 +61,7 @@
     entries.forEach(e => {
       if (e.isIntersecting) {
         const t = parseInt(e.target.dataset.count, 10);
-        if (!isNaN(t)) animateCount(e.target, t);
+        if (!isNaN(t)) { e.target.textContent = '0'; animateCount(e.target, t); }
         cIo.unobserve(e.target);
       }
     });
@@ -91,7 +91,7 @@
     }));
   }
 
-  // --- Contact form ---
+  // --- Contact form (Netlify Forms via AJAX) ---
   const form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -99,10 +99,27 @@
       const btn = form.querySelector('button[type="submit"]');
       const orig = btn.innerHTML;
       btn.disabled = true;
-      btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Message Sent';
-      btn.style.background = 'var(--cyan-500)';
-      btn.style.color = 'var(--navy-900)';
-      setTimeout(() => { form.reset(); btn.disabled = false; btn.innerHTML = orig; btn.style.background = ''; btn.style.color = ''; }, 3000);
+      btn.innerHTML = 'Sending...';
+      const data = new URLSearchParams(new FormData(form)).toString();
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: data })
+        .then(() => {
+          btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Message Sent';
+          btn.style.background = 'var(--cyan-500)';
+          btn.style.color = 'var(--navy-900)';
+          let note = form.querySelector('.form-success');
+          if (!note) {
+            note = document.createElement('p');
+            note.className = 'form-success';
+            form.appendChild(note);
+          }
+          note.innerHTML = 'Thank you! Your message has been sent successfully. Our team will respond within one business day.';
+          note.style.display = 'block';
+          setTimeout(() => { form.reset(); btn.disabled = false; btn.innerHTML = orig; btn.style.background = ''; btn.style.color = ''; }, 4000);
+        })
+        .catch(() => {
+          btn.disabled = false; btn.innerHTML = orig;
+          alert('Sorry, something went wrong. Please email us directly at Info@biosyn-ph.com');
+        });
     });
   }
 
@@ -110,6 +127,86 @@
   document.querySelectorAll('.footer-form').forEach(f => {
     f.addEventListener('submit', ev => { ev.preventDefault(); alert('Thank you for subscribing. We will be in touch.'); f.reset(); });
   });
+
+  // --- Job application modal ---
+  const applyModal = document.getElementById('applyModal');
+  if (applyModal) {
+    const jobName = document.getElementById('applyJobName');
+    const positionField = document.getElementById('applyPosition');
+    const applyForm = document.getElementById('applyForm');
+    const successBox = document.getElementById('applySuccess');
+    const cvInput = document.getElementById('aCV');
+    const cvText = document.getElementById('aCVText');
+    const cvLabel = document.getElementById('aCVLabel');
+
+    function openModal(job) {
+      jobName.textContent = job;
+      positionField.value = job;
+      applyModal.classList.add('open');
+      applyModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+    }
+    function closeModal() {
+      applyModal.classList.remove('open');
+      applyModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      setTimeout(() => {
+        applyForm.reset();
+        applyForm.querySelectorAll('.apply-field').forEach(f => f.classList.remove('invalid'));
+        successBox.classList.remove('show');
+        applyForm.querySelector('.apply-submit').style.display = '';
+        if (cvText) cvText.textContent = 'Choose file (PDF or Word)';
+        if (cvLabel) cvLabel.classList.remove('has-file');
+      }, 250);
+    }
+
+    document.querySelectorAll('.apply-btn').forEach(btn => {
+      btn.addEventListener('click', () => openModal(btn.dataset.job || 'this position'));
+    });
+    document.getElementById('applyClose').addEventListener('click', closeModal);
+    document.getElementById('applyOverlay').addEventListener('click', closeModal);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && applyModal.classList.contains('open')) closeModal(); });
+
+    if (cvInput) {
+      cvInput.addEventListener('change', () => {
+        if (cvInput.files.length) {
+          cvText.textContent = cvInput.files[0].name;
+          cvLabel.classList.add('has-file');
+          cvInput.closest('.apply-field').classList.remove('invalid');
+        }
+      });
+    }
+
+    applyForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let valid = true;
+      const fields = [
+        { id: 'aName', check: v => v.trim().length > 0 },
+        { id: 'aMobile', check: v => v.trim().length > 0 },
+        { id: 'aEmail', check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+        { id: 'aCV', check: () => cvInput.files.length > 0 }
+      ];
+      fields.forEach(f => {
+        const el = document.getElementById(f.id);
+        const wrap = el.closest('.apply-field');
+        if (!f.check(el.value)) { wrap.classList.add('invalid'); valid = false; }
+        else wrap.classList.remove('invalid');
+      });
+      if (!valid) return;
+
+      const btn = applyForm.querySelector('.apply-submit');
+      btn.disabled = true;
+      btn.innerHTML = 'Submitting...';
+      const formData = new FormData(applyForm);
+      fetch('/', { method: 'POST', body: formData })
+        .then(() => { btn.style.display = 'none'; successBox.classList.add('show'); })
+        .catch(() => {
+          btn.disabled = false;
+          btn.innerHTML = 'Submit Application';
+          alert('Sorry, something went wrong. Please email your CV directly to Info@biosyn-ph.com');
+        });
+    });
+  }
 
   // --- FAQ accordion ---
   document.querySelectorAll('.faq-q').forEach(q => {

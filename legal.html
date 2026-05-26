@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resources | Biosyn Pharmaceuticals</title>
-  <meta name="description" content="Treatment articles, clinical guidelines, and case studies from Biosyn Pharmaceuticals." />
+  <title>Legal | Biosyn Pharmaceuticals</title>
+  <meta name="description" content="Privacy Policy, Terms of Use, and Cookie Policy for Biosyn Pharmaceuticals." />
   <meta name="theme-color" content="#0A2540" />
+  <meta name="robots" content="noindex, follow" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Resources | Biosyn Pharmaceuticals" />
-  <meta property="og:description" content="Treatment articles, clinical guidelines, and case studies from Biosyn Pharmaceuticals." />
+  <meta property="og:title" content="Legal | Biosyn Pharmaceuticals" />
+  <meta property="og:description" content="Privacy Policy, Terms of Use, and Cookie Policy for Biosyn Pharmaceuticals." />
   <meta property="og:image" content="https://biosyn-ph.com/assets/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://biosyn-ph.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
   <link rel="apple-touch-icon" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,6 +20,8 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="page.css" />
 </head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
 <body>
   <div class="scroll-progress" id="scrollProgress"></div>
   <nav class="nav" id="nav">
@@ -36,7 +35,7 @@
           <li><a class="nav-link" href="about.html">About</a></li>
           <li><a class="nav-link" href="products.html">Products</a></li>
           <li><a class="nav-link" href="pipeline.html">Pipeline</a></li>
-          <li><a class="nav-link active" href="resources.html">Resources</a></li>
+          <li><a class="nav-link" href="resources.html">Resources</a></li>
           <li><a class="nav-link" href="newsroom.html">Newsroom</a></li>
           <li><a class="nav-link" href="careers.html">Careers</a></li>
           <li><a class="nav-link" href="partners.html">Partners</a></li>
@@ -57,7 +56,7 @@
     <a class="" href="about.html">About</a>
     <a class="" href="products.html">Products</a>
     <a class="" href="pipeline.html">Pipeline</a>
-    <a class="active" href="resources.html">Resources</a>
+    <a class="" href="resources.html">Resources</a>
     <a class="" href="newsroom.html">Newsroom</a>
     <a class="" href="careers.html">Careers</a>
     <a class="" href="partners.html">Partners</a>
@@ -70,43 +69,71 @@
 
 
 
+
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="page-hero-deco"></div>
-    <div class="container"><div class="page-hero-inner page-hero-split">
-      <div class="page-hero-text">
-      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Resources</span></div>
-      <h1>Knowledge that <span class="accent">moves care forward.</span></h1>
-      <p class="lead">Explore our library of treatment articles, clinical guidelines, and real-world case studies — built for healthcare professionals, partners, and curious minds.</p>
-    </div>
-      <div class="page-hero-photo page-hero-photo-rect">
-        <img src="assets/resources-photo.jpg" alt="Knowledge resources" />
-      </div>
+    <div class="container"><div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Legal</span></div>
+      <h1>Legal <span class="accent">information.</span></h1>
+      <p class="lead">Transparency matters to us. Below you'll find our Privacy Policy, Terms of Use, and Cookie Policy. Last updated: January 2026.</p>
     </div></div>
   </section>
 
-  <!-- RESOURCES -->
   <section class="section">
-    <div class="container">
-      <div class="res-tabs" data-animate>
-        <button class="res-tab active" data-tab="all"><i data-lucide="layout-grid"></i> All</button>
-        <button class="res-tab" data-tab="article"><i data-lucide="file-text"></i> Treatment &amp; Articles</button>
-        <button class="res-tab" data-tab="guideline"><i data-lucide="clipboard-list"></i> Guidelines</button>
-        <button class="res-tab" data-tab="case"><i data-lucide="microscope"></i> Case Studies</button>
+    <div class="container legal-wrap">
+      <!-- Quick nav -->
+      <div class="legal-nav">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Use</a>
+        <a href="#cookies">Cookie Policy</a>
       </div>
-      <div class="res-grid">
-        <article class="res-card" data-type="article" data-animate><div class="res-card-media res-media-1"><span class="res-type-pill">Treatment &amp; Article</span><i data-lucide="file-text"></i></div><div class="res-card-body"><div class="res-meta"><span>Otolaryngology</span><span class="res-dot"></span><span>5 min read</span></div><h3>Isotonic vs. Hypertonic Nasal Solutions: What the Evidence Says</h3><p>A practical breakdown of when each saline concentration delivers the best outcomes for nasal hygiene and congestion relief.</p><span class="res-link">Read article <i data-lucide="arrow-right"></i></span></div></article>
-        <article class="res-card" data-type="guideline" data-animate><div class="res-card-media res-media-2"><span class="res-type-pill">Guideline</span><i data-lucide="clipboard-list"></i></div><div class="res-card-body"><div class="res-meta"><span>Pediatrics</span><span class="res-dot"></span><span>Reference</span></div><h3>Pediatric Dosing Guidance for Nasal Care Products</h3><p>Age-appropriate usage recommendations and safety considerations for caregivers and practitioners.</p><span class="res-link">View guideline <i data-lucide="arrow-right"></i></span></div></article>
-        <article class="res-card" data-type="case" data-animate><div class="res-card-media res-media-3"><span class="res-type-pill">Case Study</span><i data-lucide="microscope"></i></div><div class="res-card-body"><div class="res-meta"><span>Real-World Evidence</span><span class="res-dot"></span><span>Case</span></div><h3>Managing Chronic Nasal Dryness: A Patient Journey</h3><p>How a structured nasal-care regimen improved daily comfort and adherence in a real patient scenario.</p><span class="res-link">Read case study <i data-lucide="arrow-right"></i></span></div></article>
-        <article class="res-card" data-type="article" data-animate><div class="res-card-media res-media-4"><span class="res-type-pill">Treatment &amp; Article</span><i data-lucide="file-text"></i></div><div class="res-card-body"><div class="res-meta"><span>Formulation Science</span><span class="res-dot"></span><span>6 min read</span></div><h3>Why Excipient Selection Matters in Pediatric Formulations</h3><p>The science behind choosing safe, palatable, and stable ingredients for medicines designed for children.</p><span class="res-link">Read article <i data-lucide="arrow-right"></i></span></div></article>
-        <article class="res-card" data-type="guideline" data-animate><div class="res-card-media res-media-5"><span class="res-type-pill">Guideline</span><i data-lucide="clipboard-list"></i></div><div class="res-card-body"><div class="res-meta"><span>Quality</span><span class="res-dot"></span><span>Reference</span></div><h3>Safe Storage &amp; Handling of Nasal Care Products</h3><p>Best-practice storage conditions, shelf-life considerations, and handling tips for pharmacies and homes.</p><span class="res-link">View guideline <i data-lucide="arrow-right"></i></span></div></article>
-        <article class="res-card" data-type="case" data-animate><div class="res-card-media res-media-6"><span class="res-type-pill">Case Study</span><i data-lucide="microscope"></i></div><div class="res-card-body"><div class="res-meta"><span>Pediatrics</span><span class="res-dot"></span><span>Case</span></div><h3>Improving Treatment Adherence in Young Patients</h3><p>A look at how formulation and caregiver education together drove better outcomes in pediatric ENT care.</p><span class="res-link">Read case study <i data-lucide="arrow-right"></i></span></div></article>
-      </div>
-      <div style="text-align:center; margin-top:48px;" data-animate>
-        <p style="color:var(--muted); font-size:0.95rem; margin-bottom:20px;">New resources are added regularly. Have a topic you'd like us to cover?</p>
-        <a href="contact.html" class="btn btn-ghost">Suggest a Topic
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      </div>
+
+      <!-- PRIVACY -->
+      <article id="privacy" class="legal-block">
+        <h2>Privacy Policy</h2>
+        <p>Biosyn Pharmaceuticals ("Biosyn", "we", "us") respects your privacy and is committed to protecting any personal information you share with us. This policy explains what we collect, why, and how we handle it.</p>
+        <h3>Information we collect</h3>
+        <p>When you contact us, apply for a position, or subscribe to updates, we may collect your name, email address, phone number, and any information you choose to include in your message or attachments (such as a CV). We only collect what you voluntarily provide.</p>
+        <h3>How we use your information</h3>
+        <p>We use your information solely to respond to your enquiries, process job applications, send updates you have requested, and improve our services. We do not sell, rent, or trade your personal information to third parties.</p>
+        <h3>Adverse event reporting</h3>
+        <p>If you contact us to report a side effect or product quality concern, we may process the relevant health information strictly for pharmacovigilance and regulatory compliance purposes, in line with applicable Egyptian Drug Authority (EDA) requirements.</p>
+        <h3>Data retention &amp; security</h3>
+        <p>We retain personal information only as long as necessary for the purposes described, or as required by law. We apply reasonable technical and organizational measures to protect your data against unauthorized access or disclosure.</p>
+        <h3>Your rights</h3>
+        <p>You may request access to, correction of, or deletion of your personal information at any time by emailing <a href="mailto:Info@biosyn-ph.com">Info@biosyn-ph.com</a>.</p>
+      </article>
+
+      <!-- TERMS -->
+      <article id="terms" class="legal-block">
+        <h2>Terms of Use</h2>
+        <p>By accessing and using this website, you agree to the following terms. If you do not agree, please do not use the site.</p>
+        <h3>Use of content</h3>
+        <p>All content on this website — including text, graphics, logos, and images — is the property of Biosyn Pharmaceuticals and is protected by applicable intellectual property laws. You may view and share content for personal, non-commercial purposes, but may not reproduce or republish it without our written permission.</p>
+        <h3>No medical advice</h3>
+        <p>The information on this website is provided for general informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional regarding any medical condition or treatment. Product information is intended for reference and does not replace the approved labeling or a physician's guidance.</p>
+        <h3>Accuracy of information</h3>
+        <p>We strive to keep information accurate and current, but we make no warranties regarding completeness or accuracy. Product availability and pipeline status may change over time.</p>
+        <h3>External links</h3>
+        <p>Our website may contain links to third-party sites. We are not responsible for the content or privacy practices of those sites.</p>
+        <h3>Limitation of liability</h3>
+        <p>Biosyn Pharmaceuticals shall not be liable for any damages arising from the use of, or inability to use, this website to the fullest extent permitted by law.</p>
+      </article>
+
+      <!-- COOKIES -->
+      <article id="cookies" class="legal-block">
+        <h2>Cookie Policy</h2>
+        <p>This website uses a minimal set of cookies to ensure it functions properly and to understand how visitors use it.</p>
+        <h3>What are cookies?</h3>
+        <p>Cookies are small text files stored on your device when you visit a website. They help the site remember your preferences and improve your experience.</p>
+        <h3>How we use cookies</h3>
+        <p>We use essential cookies required for the website to operate, and we may use basic analytics cookies to measure traffic and improve our content. We do not use cookies for advertising or to track you across other websites.</p>
+        <h3>Managing cookies</h3>
+        <p>You can control or delete cookies through your browser settings at any time. Disabling cookies may affect certain features of the site.</p>
+        <h3>Contact</h3>
+        <p>For any questions about this policy, email us at <a href="mailto:Info@biosyn-ph.com">Info@biosyn-ph.com</a>.</p>
+      </article>
     </div>
   </section>
   <footer class="footer">
@@ -160,6 +187,7 @@
       </div>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
