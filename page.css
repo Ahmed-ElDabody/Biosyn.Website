@@ -638,3 +638,9 @@ body.modal-open { overflow: hidden; }
   .commit-trust .dot { display: none; }
   .commit-trust { gap: 10px 18px; }
 }
+
+/* ===== Resources cards: photos instead of icons ===== */
+a.res-card { text-decoration: none; color: inherit; }
+.res-card-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.res-card-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,37,64,0) 45%, rgba(10,37,64,0.28)); z-index: 1; }
+.res-card-media .res-type-pill { z-index: 3; }
