@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="https://biosyn-ph.com/" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources | Biosyn Pharmaceuticals</title>
@@ -20,18 +19,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@1.17.0/dist/umd/lucide.min.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="page.css" />
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress"></div>
-  <a class="skip-link" href="#main">Skip to main content</a>
   <nav class="nav" id="nav">
     <div class="container">
       <div class="nav-inner">
         <a href="index.html" class="nav-logo" aria-label="Biosyn Pharmaceuticals home">
-          <img src="assets/logo.png" alt="Biosyn Pharmaceuticals" decoding="async" />
+          <img src="assets/logo.png" alt="Biosyn Pharmaceuticals" />
         </a>
         <ul class="nav-menu">
           <li><a class="nav-link" href="index.html">Home</a></li>
@@ -73,7 +72,7 @@
 
 
   <!-- PAGE HERO -->
-  <section class="page-hero" id="main" tabindex="-1">
+  <section class="page-hero">
     <div class="page-hero-deco"></div>
     <div class="container"><div class="page-hero-inner page-hero-split">
       <div class="page-hero-text">
@@ -82,7 +81,7 @@
       <p class="lead">Explore our library of treatment articles, clinical guidelines, and real-world case studies — built for healthcare professionals, partners, and curious minds.</p>
     </div>
       <div class="page-hero-photo page-hero-photo-rect">
-        <img src="assets/resources-photo.jpg" alt="Knowledge resources" fetchpriority="high" decoding="async" />
+        <img src="assets/resources-photo.webp" alt="Knowledge resources" />
       </div>
     </div></div>
   </section>
@@ -90,19 +89,19 @@
   <!-- RESOURCES -->
   <section class="section">
     <div class="container">
-      <div class="res-tabs" data-animate role="group" aria-label="Filter resources by type">
-        <button class="res-tab active" data-tab="all" aria-pressed="true"><i data-lucide="layout-grid"></i> All</button>
-        <button class="res-tab" data-tab="article" aria-pressed="false"><i data-lucide="file-text"></i> Treatment &amp; Articles</button>
-        <button class="res-tab" data-tab="guideline" aria-pressed="false"><i data-lucide="clipboard-list"></i> Guidelines</button>
-        <button class="res-tab" data-tab="case" aria-pressed="false"><i data-lucide="microscope"></i> Case Studies</button>
+      <div class="res-tabs" data-animate>
+        <button class="res-tab active" data-tab="all"><i data-lucide="layout-grid"></i> All</button>
+        <button class="res-tab" data-tab="article"><i data-lucide="file-text"></i> Treatment &amp; Articles</button>
+        <button class="res-tab" data-tab="guideline"><i data-lucide="clipboard-list"></i> Guidelines</button>
+        <button class="res-tab" data-tab="case"><i data-lucide="microscope"></i> Case Studies</button>
       </div>
       <div class="res-grid">
-        <article class="res-card" data-type="article" data-animate><div class="res-card-media res-media-1" style="background-image:linear-gradient(135deg,rgba(10,37,64,.62),rgba(10,37,64,.18)),url('https://images.unsplash.com/photo-1531353826977-0941b4779a1c?auto=format&amp;fit=crop&amp;w=900&amp;h=540&amp;q=70');background-size:cover;background-position:center;"><span class="res-type-pill">Treatment &amp; Article</span></div><div class="res-card-body"><div class="res-meta"><span>Otolaryngology</span><span class="res-dot"></span><span>5 min read</span></div><h3>Nasal Congestion: Clearing a Stuffy Nose Safely</h3><p>Why medicated sprays can backfire, how natural seawater clears the blockage, and when to choose isotonic vs. hypertonic.</p><a class="res-link" href="articles/nasal-congestion.html">Read article <i data-lucide="arrow-right"></i></a></div></article>
+        <article class="res-card" data-type="article" data-animate><div class="res-card-media res-media-1"><span class="res-type-pill">Treatment &amp; Article</span><i data-lucide="file-text"></i></div><div class="res-card-body"><div class="res-meta"><span>Otolaryngology</span><span class="res-dot"></span><span>5 min read</span></div><h3>Isotonic vs. Hypertonic Nasal Solutions: What the Evidence Says</h3><p>A practical breakdown of when each saline concentration delivers the best outcomes for nasal hygiene and congestion relief.</p><span class="res-link">Read article <i data-lucide="arrow-right"></i></span></div></article>
         <article class="res-card" data-type="guideline" data-animate><div class="res-card-media res-media-2"><span class="res-type-pill">Guideline</span><i data-lucide="clipboard-list"></i></div><div class="res-card-body"><div class="res-meta"><span>Pediatrics</span><span class="res-dot"></span><span>Reference</span></div><h3>Pediatric Dosing Guidance for Nasal Care Products</h3><p>Age-appropriate usage recommendations and safety considerations for caregivers and practitioners.</p><span class="res-link">View guideline <i data-lucide="arrow-right"></i></span></div></article>
-        <article class="res-card" data-type="article" data-animate><div class="res-card-media res-media-3" style="background-image:linear-gradient(135deg,rgba(10,37,64,.62),rgba(10,37,64,.18)),url('https://images.unsplash.com/photo-1632323187625-7a4e4414338e?auto=format&amp;fit=crop&amp;w=900&amp;h=540&amp;q=70');background-size:cover;background-position:center;"><span class="res-type-pill">Treatment &amp; Article</span></div><div class="res-card-body"><div class="res-meta"><span>Otolaryngology</span><span class="res-dot"></span><span>4 min read</span></div><h3>Nasal Dryness: Restoring Comfort Naturally</h3><p>What dries your nose out — and how a gentle, chemical-free seawater and gel routine prevents crusts, nosebleeds, and irritation.</p><a class="res-link" href="articles/nasal-dryness.html">Read article <i data-lucide="arrow-right"></i></a></div></article>
-        <article class="res-card" data-type="article" data-animate><div class="res-card-media res-media-4" style="background-image:linear-gradient(135deg,rgba(10,37,64,.62),rgba(10,37,64,.18)),url('https://images.unsplash.com/photo-1577896852336-e749dd04f202?auto=format&amp;fit=crop&amp;w=900&amp;h=540&amp;q=70');background-size:cover;background-position:center;"><span class="res-type-pill">Treatment &amp; Article</span></div><div class="res-card-body"><div class="res-meta"><span>Otolaryngology</span><span class="res-dot"></span><span>4 min read</span></div><h3>Daily Nasal Hygiene</h3><p>Why a simple, drug-free seawater routine protects your whole family's breathing — and how to make it a daily habit.</p><a class="res-link" href="articles/daily-nasal-hygiene.html">Read article <i data-lucide="arrow-right"></i></a></div></article>
+        <article class="res-card" data-type="case" data-animate><div class="res-card-media res-media-3"><span class="res-type-pill">Case Study</span><i data-lucide="microscope"></i></div><div class="res-card-body"><div class="res-meta"><span>Real-World Evidence</span><span class="res-dot"></span><span>Case</span></div><h3>Managing Chronic Nasal Dryness: A Patient Journey</h3><p>How a structured nasal-care regimen improved daily comfort and adherence in a real patient scenario.</p><span class="res-link">Read case study <i data-lucide="arrow-right"></i></span></div></article>
+        <article class="res-card" data-type="article" data-animate><div class="res-card-media res-media-4"><span class="res-type-pill">Treatment &amp; Article</span><i data-lucide="file-text"></i></div><div class="res-card-body"><div class="res-meta"><span>Formulation Science</span><span class="res-dot"></span><span>6 min read</span></div><h3>Why Excipient Selection Matters in Pediatric Formulations</h3><p>The science behind choosing safe, palatable, and stable ingredients for medicines designed for children.</p><span class="res-link">Read article <i data-lucide="arrow-right"></i></span></div></article>
         <article class="res-card" data-type="guideline" data-animate><div class="res-card-media res-media-5"><span class="res-type-pill">Guideline</span><i data-lucide="clipboard-list"></i></div><div class="res-card-body"><div class="res-meta"><span>Quality</span><span class="res-dot"></span><span>Reference</span></div><h3>Safe Storage &amp; Handling of Nasal Care Products</h3><p>Best-practice storage conditions, shelf-life considerations, and handling tips for pharmacies and homes.</p><span class="res-link">View guideline <i data-lucide="arrow-right"></i></span></div></article>
-        <article class="res-card" data-type="article" data-animate><div class="res-card-media res-media-6" style="background-image:linear-gradient(135deg,rgba(10,37,64,.62),rgba(10,37,64,.18)),url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&amp;fit=crop&amp;w=900&amp;h=540&amp;q=70');background-size:cover;background-position:center;"><span class="res-type-pill">Treatment &amp; Article</span></div><div class="res-card-body"><div class="res-meta"><span>Pediatrics</span><span class="res-dot"></span><span>5 min read</span></div><h3>Recurrent Colds in School-Age Children</h3><p>Why kids catch cold after cold, the complications to watch for, and the safe seawater routine pediatricians recommend.</p><a class="res-link" href="articles/recurrent-colds-children.html">Read article <i data-lucide="arrow-right"></i></a></div></article>
+        <article class="res-card" data-type="case" data-animate><div class="res-card-media res-media-6"><span class="res-type-pill">Case Study</span><i data-lucide="microscope"></i></div><div class="res-card-body"><div class="res-meta"><span>Pediatrics</span><span class="res-dot"></span><span>Case</span></div><h3>Improving Treatment Adherence in Young Patients</h3><p>A look at how formulation and caregiver education together drove better outcomes in pediatric ENT care.</p><span class="res-link">Read case study <i data-lucide="arrow-right"></i></span></div></article>
       </div>
       <div style="text-align:center; margin-top:48px;" data-animate>
         <p style="color:var(--muted); font-size:0.95rem; margin-bottom:20px;">New resources are added regularly. Have a topic you'd like us to cover?</p>
@@ -115,7 +114,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="assets/logo-white.png" alt="Biosyn Pharmaceuticals" class="footer-logo" loading="lazy" decoding="async" />
+          <img src="assets/logo-white.png" alt="Biosyn Pharmaceuticals" class="footer-logo" />
           <p>A commitment towards better health.</p>
           <div class="footer-socials">
             <a href="https://www.facebook.com/share/1N5hrjsTDB/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook" class="social-fb"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.09 24 12.07Z"/></svg></a>
@@ -162,6 +161,6 @@
       </div>
     </div>
   </footer>
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
