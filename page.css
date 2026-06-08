@@ -569,7 +569,8 @@ body.modal-open { overflow: hidden; }
   font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
   font-weight: 600; font-size: clamp(2rem, 4vw, 3.1rem);
   line-height: 1.07; letter-spacing: -0.01em; margin-top: 16px;
-  text-shadow: 0 2px 28px rgba(0,0,0,0.40);
+  color: #ffffff;
+  text-shadow: 0 2px 28px rgba(0,0,0,0.45);
 }
 .life-band .band-cap p {
   font-size: clamp(0.98rem, 1.4vw, 1.1rem);
