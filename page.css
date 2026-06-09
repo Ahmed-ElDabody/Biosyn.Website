@@ -195,7 +195,7 @@
 .ta-features li i { width: 16px; height: 16px; color: var(--cyan-500); flex-shrink: 0; }
 .ta-card-alt .ta-features li i { color: var(--teal-600); }
 .ta-card-pulmo .ta-features li i { color: #6366F1; }
-@media (max-width: 900px) { .ta-grid { grid-template-columns: 1fr; } .ta-card { grid-template-columns: 1fr; } .ta-visual { aspect-ratio: 16/7; } .ta-features { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .ta-grid { grid-template-columns: 1fr; } .ta-card { grid-template-columns: 1fr; } .ta-visual { aspect-ratio: 4/3; } .ta-features { grid-template-columns: 1fr; } }
 
 /* ---------- PIPELINE ---------- */
 .pipeline-legend { display: flex; gap: 28px; margin-bottom: 40px; flex-wrap: wrap; padding: 18px 26px; background: var(--canvas-tint); border: 1px solid var(--hairline); border-radius: 100px; width: fit-content; }
